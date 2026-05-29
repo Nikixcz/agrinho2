@@ -1,189 +1,200 @@
+/* Configurações Globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Fonte nova, moderna e elegante */
-    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
 }
-
 
 body {
-    background-color: #f0f7f0;
-    color: #333;
-    line-height: 1.6;
+    background-color: #0f172a; /* Fundo escuro moderno, estilo games */
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Navbar Responsiva */
 header {
-    background-color: #1b5e20;
-    color: white;
-    padding: 1rem 2rem;
+    background-color: #1e293b;
+    padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    border-bottom: 2px solid #334155;
 }
 
 header .logo {
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #4ade80;
 }
 
-nav ul {
+.tag-projeto {
+    background-color: #334155;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* Container do Painel */
+.quiz-container {
+    flex: 1;
     display: flex;
-    list-style: none;
-    gap: 1.2rem;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #a5d6a7;
-}
-
-/* Banner */
-.banner {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') center/cover;
-    color: white;
-    text-align: center;
-    padding: 5rem 1rem;
-}
-
-.banner h1 { font-size: 2.3rem; margin-bottom: 0.5rem; }
-
-/* Estrutura das Seções */
-main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.section-box {
-    background: white;
+.card-box {
+    background-color: #1e293b;
+    width: 100%;
+    max-width: 600px;
     padding: 2.5rem;
-    border-radius: 10px;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 1px solid #334155;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
 }
 
 h2 {
-    color: #1b5e20;
+    font-size: 1.35rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    line-height: 1.5;
+}
+
+p {
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+/* Barra de Progresso */
+.progresso-barra {
+    text-align: left;
+    color: #94a3b8;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
-    border-left: 5px solid #4caf50;
-    padding-left: 10px;
 }
 
-/* Grid Responsivo (Dicas e Energias) */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+.barra-fundo {
+    background-color: #334155;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 0.4rem;
+    overflow: hidden;
 }
 
-.card {
-    background: #fdfdfd;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    border-top: 4px solid #4caf50;
+#barra-preenchimento {
+    background-color: #4ade80;
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease;
 }
 
-/* Animações Simples para as Fontes de Energia */
-.energia-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.energia-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.icone-animado {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    animation: flutuar 3s ease-in-out infinite;
-}
-
-@keyframes flutuar {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-}
-
-/* Formulários e Containers Interativos */
-.interativo-container {
-    max-width: 500px;
-    margin: 1.5rem auto 0 auto;
+/* Botões de Alternativas (Formato Quizizz) */
+.alternativas-grid {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
 }
 
-.text-left { text-align: left; }
-.pergunta { margin-bottom: 1rem; }
-
-input[type="number"], select {
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-}
-
-button {
-    background-color: #2e7d32;
-    color: white;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-}
-
-button:hover { background-color: #1b5e20; }
-
-/* Caixas de Resultados Dinâmicos */
-.resultado-box {
+.btn-opcao {
+    background-color: #334155;
+    color: #f8fafc;
+    border: 2px solid transparent;
     padding: 1rem;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 1rem;
-    text-align: center;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.hidden { display: none; }
+.btn-opcao:hover {
+    background-color: #475569;
+    border-color: #64748b;
+}
 
-/* Rodapé */
-footer {
-    background-color: #1b5e20;
+/* Estados de Correção */
+.btn-opcao.correta {
+    background-color: #065f46 !important;
+    border-color: #10b981 !important;
+    color: #a7f3d0;
+}
+
+.btn-opcao.errada {
+    background-color: #7f1d1d !important;
+    border-color: #ef4444 !important;
+    color: #fca5a5;
+}
+
+/* Botões de Ação */
+.btn-principal {
+    background-color: #2563eb;
     color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.btn-principal:hover {
+    background-color: #1d4ed8;
+}
+
+/* Caixa de Feedback de Dicas */
+.feedback-box {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: left;
+    border: 2px solid transparent;
+}
+
+.feedback-box.sucesso {
+    background-color: rgba(16, 185, 129, 0.1);
+    border-color: #10b981;
+}
+
+.feedback-box.sucesso h3 { color: #4ade80; }
+
+.feedback-box.erro {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+}
+
+.feedback-box.erro h3 { color: #f87171; }
+.feedback-box p { color: #e2e8f0; margin-top: 0.5rem; margin-bottom: 1.5rem;}
+
+/* Pontuação Final */
+.resultado-pontos {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #4ade80;
+    margin: 1.5rem 0;
+}
+
+/* Classes Utilitárias */
+.hidden { display: none !important; }
+
+footer {
     text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 4rem;
-}
-
-.tag-agrinho {
-    color: #a5d6a7;
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-}
-
-/* Responsividade Mobile */
-@media (max-width: 600px) {
-    header { flex-direction: column; gap: 1rem; text-align: center; }
-    .banner h1 { font-size: 1.7rem; }
-    .section-box { padding: 1.5rem; }
+    padding: 1rem;
+    color: #475569;
+    font-size: 0.85rem;
+    background-color: #0b0f19;
 }
