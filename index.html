@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Sustentável | Agrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <div class="logo">🌱 Agro Sustentável</div>
+        <nav>
+            <ul>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <h1>Agricultura Consciente para o Futuro</h1>
+        <p>Pequenas ações no campo geram grandes impactos no nosso planeta.</p>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção de Dicas Semântica -->
+        <section id="dicas" class="cards-section">
+            <h2>Dicas de Preservação Ambiental</h2>
+            <div class="grid-container">
+                <article class="card">
+                    <h3>💧 Uso da Água</h3>
+                    <p>Utilize sistemas de gotejamento para evitar o desperdício e priorize a captação da água da chuva.</p>
+                </article>
+                <article class="card">
+                    <h3>🍂 Adubação Orgânica</h3>
+                    <p>Substitua produtos químicos por compostagem natural. Isso protege o solo e os lençóis freáticos.</p>
+                </article>
+                <article class="card">
+                    <h3>🐝 Proteção à Biodiversidade</h3>
+                    <p>Plante cercas vivas e preserve flores nativas para atrair polinizadores essenciais como as abelhas.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Interativa com JavaScript (Calculadora) -->
+        <section id="calculadora" class="interactive-section">
+            <h2>Simulador de Economia de Água</h2>
+            <p>Descubra quantos litros você pode salvar por mês usando a irrigação por gotejamento em uma horta pequena!</p>
+            <div class="calc-box">
+                <label for="dias">Quantos dias na semana você irriga a horta?</label>
+                <input type="number" id="dias" min="1" max="7" placeholder="Ex: 5">
+                <button id="btn-calcular">Calcular Economia</button>
+                <p id="resultado" class="hidden"></p>
+            </div>
+        </section>
+
+        <!-- Formulário de Contato com Validação JS -->
+        <section id="contato" class="form-section">
+            <h2>Faça Parte do Movimento</h2>
+            <p>Receba nossa cartilha digital de agricultura consciente.</p>
+            <form id="form-news">
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" placeholder="Seu Melhor E-mail" required>
+                <button type="submit">Quero Receber</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé com Tag Obrigatória -->
+    <footer>
+        <p>&copy; 2026 Agro Sustentável. Todos os direitos reservados.</p>
+        <p class="tag-agrinho">#agrinho #agriculturasustentavel</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
